@@ -13,6 +13,10 @@
 		D451CA0324179BAE001F4B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D451CA0124179BAE001F4B2F /* Main.storyboard */; };
 		D451CA0524179BB0001F4B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D451CA0424179BB0001F4B2F /* Assets.xcassets */; };
 		D451CA0824179BB0001F4B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D451CA0624179BB0001F4B2F /* LaunchScreen.storyboard */; };
+		D471159824189E8600FB72AF /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471159724189E8600FB72AF /* Const.swift */; };
+		D471159B24189FB100FB72AF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471159A24189FB100FB72AF /* CoreBluetooth.framework */; };
+		D471159D24189FB900FB72AF /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471159C24189FB900FB72AF /* ExternalAccessory.framework */; };
+		D471159F2418A01E00FB72AF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D471159E24189FC600FB72AF /* libc++.tbd */; };
 		D48509042417A01000918392 /* libiRockey301_ccid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D48509032417A01000918392 /* libiRockey301_ccid.a */; };
 		D485090C2417A05B00918392 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D485090B2417A05B00918392 /* hex.m */; };
 		D48509132417A1F700918392 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D48509102417A1F600918392 /* SVProgressHUD.m */; };
@@ -29,6 +33,10 @@
 		D451CA0424179BB0001F4B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D451CA0724179BB0001F4B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D451CA0924179BB0001F4B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D471159724189E8600FB72AF /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		D471159A24189FB100FB72AF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D471159C24189FB900FB72AF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		D471159E24189FC600FB72AF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		D48509032417A01000918392 /* libiRockey301_ccid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiRockey301_ccid.a; sourceTree = "<group>"; };
 		D48509052417A02100918392 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
 		D48509062417A02200918392 /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
@@ -49,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D471159D24189FB900FB72AF /* ExternalAccessory.framework in Frameworks */,
+				D471159B24189FB100FB72AF /* CoreBluetooth.framework in Frameworks */,
+				D471159F2418A01E00FB72AF /* libc++.tbd in Frameworks */,
 				D48509042417A01000918392 /* libiRockey301_ccid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +72,7 @@
 			children = (
 				D451C9FA24179BAE001F4B2F /* br301 */,
 				D451C9F924179BAE001F4B2F /* Products */,
+				D471159924189FB100FB72AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,8 +103,19 @@
 				D451CA0624179BB0001F4B2F /* LaunchScreen.storyboard */,
 				D451CA0924179BB0001F4B2F /* Info.plist */,
 				D48509092417A05A00918392 /* br301-Bridging-Header.h */,
+				D471159724189E8600FB72AF /* Const.swift */,
 			);
 			path = br301;
+			sourceTree = "<group>";
+		};
+		D471159924189FB100FB72AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D471159E24189FC600FB72AF /* libc++.tbd */,
+				D471159C24189FB900FB72AF /* ExternalAccessory.framework */,
+				D471159A24189FB100FB72AF /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D485090D2417A1F600918392 /* SVProgressHUD */ = {
@@ -186,6 +209,7 @@
 				D451C9FC24179BAE001F4B2F /* AppDelegate.swift in Sources */,
 				D451C9FE24179BAE001F4B2F /* SceneDelegate.swift in Sources */,
 				D48509142417A1F700918392 /* SVIndefiniteAnimatedView.m in Sources */,
+				D471159824189E8600FB72AF /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +365,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/br301",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = th.ac.psu.eng.br301;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "br301/br301-Bridging-Header.h";
@@ -366,6 +391,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/br301",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = th.ac.psu.eng.br301;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "br301/br301-Bridging-Header.h";
